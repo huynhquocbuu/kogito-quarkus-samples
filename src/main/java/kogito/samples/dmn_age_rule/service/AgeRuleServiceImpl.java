@@ -7,8 +7,8 @@ import org.kie.kogito.incubation.common.MapDataContext;
 import org.kie.kogito.incubation.decisions.DecisionIds;
 import org.kie.kogito.incubation.decisions.services.DecisionService;
 
-import kogito.samples.dmn_age_rule.data.AgeRuleRequest;
-import kogito.samples.dmn_age_rule.data.AgeRuleResponse;
+import kogito.samples.dmn_age_rule.payload.AgeRuleRequest;
+import kogito.samples.dmn_age_rule.payload.AgeRuleResponse;
 
 @ApplicationScoped
 public class AgeRuleServiceImpl implements AgeRuleService{

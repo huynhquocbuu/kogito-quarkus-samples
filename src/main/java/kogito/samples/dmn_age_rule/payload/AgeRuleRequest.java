@@ -1,4 +1,4 @@
-package kogito.samples.dmn_age_rule.data;
+package kogito.samples.dmn_age_rule.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,5 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AgeRuleRequest {
-    private String age;
+    private int age;
 }

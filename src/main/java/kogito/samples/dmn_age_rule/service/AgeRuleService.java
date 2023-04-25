@@ -1,7 +1,7 @@
 package kogito.samples.dmn_age_rule.service;
 
-import kogito.samples.dmn_age_rule.data.AgeRuleRequest;
-import kogito.samples.dmn_age_rule.data.AgeRuleResponse;
+import kogito.samples.dmn_age_rule.payload.AgeRuleRequest;
+import kogito.samples.dmn_age_rule.payload.AgeRuleResponse;
 
 public interface AgeRuleService {
     AgeRuleResponse executeRule(AgeRuleRequest input);
