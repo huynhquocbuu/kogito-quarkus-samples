@@ -1,4 +1,4 @@
-package kogito.samples.dmn_age_rule.payload;
+package kogito.samples.dmn_age_rule.rulePayload;
 
 import org.kie.kogito.incubation.common.DataContext;
 import org.kie.kogito.incubation.common.DefaultCastable;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AgeRuleResponse extends AgeRuleRequest implements DataContext, DefaultCastable{
+public class AgeRuleOutput extends AgeRuleInput implements DataContext, DefaultCastable{
     
     private boolean adult;
 }

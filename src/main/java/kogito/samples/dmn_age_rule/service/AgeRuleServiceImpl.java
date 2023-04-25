@@ -7,8 +7,8 @@ import org.kie.kogito.incubation.common.MapDataContext;
 import org.kie.kogito.incubation.decisions.DecisionIds;
 import org.kie.kogito.incubation.decisions.services.DecisionService;
 
-import kogito.samples.dmn_age_rule.payload.AgeRuleRequest;
-import kogito.samples.dmn_age_rule.payload.AgeRuleResponse;
+import kogito.samples.dmn_age_rule.rulePayload.AgeRuleInput;
+import kogito.samples.dmn_age_rule.rulePayload.AgeRuleOutput;
 
 @ApplicationScoped
 public class AgeRuleServiceImpl implements AgeRuleService{
@@ -22,14 +22,14 @@ public class AgeRuleServiceImpl implements AgeRuleService{
     }
 
     @Override
-    public AgeRuleResponse executeRule(AgeRuleRequest input) {
+    public AgeRuleOutput executeRule(AgeRuleInput input) {
         var id = appRoot
                 .get(DecisionIds.class)
                 .get("dmn.samples.person",
                         "PersonDecisions");
         var ctx = MapDataContext.from(input);
         var ruleOutput = svc.evaluate(id, ctx).data();
-        return ruleOutput.as(AgeRuleResponse.class);
+        return ruleOutput.as(AgeRuleOutput.class);
     }
     
 }
