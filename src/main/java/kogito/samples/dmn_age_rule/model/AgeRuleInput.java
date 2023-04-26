@@ -1,4 +1,4 @@
-package kogito.samples.dmn_age_rule.rulePayload;
+package kogito.samples.dmn_age_rule.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

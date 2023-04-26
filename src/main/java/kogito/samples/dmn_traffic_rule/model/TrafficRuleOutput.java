@@ -1,16 +1,15 @@
-package kogito.samples.common.exceptionHandler;
+package kogito.samples.dmn_traffic_rule.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ErrorResponse {
-    private String errorCode;
-    private String errors;
-    
+public class TrafficRuleOutput {
+    private Fine fine;
+    private String shouldBeSuspended;
 }

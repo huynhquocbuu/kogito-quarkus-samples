@@ -1,4 +1,4 @@
-package kogito.samples.dmn_age_rule.rulePayload;
+package kogito.samples.dmn_age_rule.model;
 
 import org.kie.kogito.incubation.common.DataContext;
 import org.kie.kogito.incubation.common.DefaultCastable;

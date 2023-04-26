@@ -13,19 +13,21 @@ import org.eclipse.microprofile.openapi.annotations.enums.SchemaType;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 
-import kogito.samples.common.exceptionHandler.ErrorResponse;
-import kogito.samples.common.httpResponseHandler.ResponseHandler;
-import kogito.samples.common.httpResponseHandler.ResponseWrapper;
-import kogito.samples.dmn_age_rule.rulePayload.AgeRuleInput;
-import kogito.samples.dmn_age_rule.rulePayload.AgeRuleOutput;
+import kogito.samples.dmn_age_rule.converter.AgeRuleConverter;
+import kogito.samples.dmn_age_rule.model.AgeRuleInput;
+import kogito.samples.dmn_age_rule.model.AgeRuleOutput;
+import kogito.samples.dmn_age_rule.payload.AgeRuleRequest;
+import kogito.samples.dmn_age_rule.payload.AgeRuleResponse;
 import kogito.samples.dmn_age_rule.service.AgeRuleService;
 
 @Path("/age-rule")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "age-dmn-rule", description = "Age dmn Rule")
-public class AgeRuleController {  
+public class AgeRuleController {
+
     private AgeRuleService ruleService;
+    
     public AgeRuleController(AgeRuleService ruleService) {
         this.ruleService = ruleService;
     }
@@ -36,7 +38,7 @@ public class AgeRuleController {
             description = "Request Decision Success",
             content = @Content(
                     mediaType = MediaType.APPLICATION_JSON,
-                    schema = @Schema(type = SchemaType.OBJECT, implementation = ResponseWrapper<AgeRuleOutput>.class)
+                    schema = @Schema(type = SchemaType.OBJECT, implementation = AgeRuleResponse.class)
             )
     )
     @APIResponse(
@@ -44,11 +46,14 @@ public class AgeRuleController {
             description = "Request Decision Fail",
             content = @Content(
                     mediaType = MediaType.APPLICATION_JSON,
-                    schema = @Schema(type = SchemaType.ARRAY, implementation = ErrorResponse.class)
+                    schema = @Schema(type = SchemaType.OBJECT, implementation = AgeRuleResponse.class)
             )
     )
-    public RestResponse<ResponseWrapper<AgeRuleOutput>> ageRule(AgeRuleInput request) {
-        AgeRuleOutput output = ruleService.executeRule(request);
-        return ResponseHandler.responseOk(output);
+    public RestResponse<AgeRuleResponse> ageRule(AgeRuleRequest request) {
+        
+        AgeRuleInput ruleInput = request.getInput();
+        AgeRuleOutput ruleOutput = ruleService.executeRule(ruleInput);
+
+        return AgeRuleConverter.toRestResponseOk(ruleOutput);
     }
 }

@@ -1,23 +1,28 @@
-package kogito.samples.common.httpResponseHandler;
+package kogito.samples.dmn_age_rule.payload;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import kogito.samples.dmn_age_rule.model.AgeRuleOutput;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseWrapper<T> {
+public class AgeRuleResponse {
+
     private String status;
+
     @JsonProperty("error-code")
     private String errorCode;
 
     @JsonProperty("error-message")
     private String errorMessage;
-    private T data;
-
+    
+    @JsonProperty("rule-output")
+    private AgeRuleOutput ruleOutput;
 }
