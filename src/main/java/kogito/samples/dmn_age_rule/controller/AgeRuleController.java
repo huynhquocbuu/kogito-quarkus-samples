@@ -1,5 +1,6 @@
 package kogito.samples.dmn_age_rule.controller;
 
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -49,8 +50,8 @@ public class AgeRuleController {
                     schema = @Schema(type = SchemaType.OBJECT, implementation = AgeRuleResponse.class)
             )
     )
-    public RestResponse<AgeRuleResponse> ageRule(AgeRuleRequest request) {
-        
+    public RestResponse<AgeRuleResponse> ageRule(@Valid AgeRuleRequest request) throws Exception {
+        //throw new Exception("test 11233");
         AgeRuleInput ruleInput = request.getInput();
         AgeRuleOutput ruleOutput = ruleService.executeRule(ruleInput);
 

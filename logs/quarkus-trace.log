@@ -1,0 +1,6 @@
+2023-04-27 10:15:05,403 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 8.443s. Listening on: http://localhost:9081
+2023-04-27 10:15:05,405 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-04-27 10:15:05,406 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-validator, kogito-decisions, kogito-predictions, kogito-processes, kogito-rules, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-04-27 10:15:05,407 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Live reload total time: 8.567s 
+2023-04-27 10:22:20,977 tpfho-0472mn9 dmn-rule-dev.jar[19656] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
+2023-04-27 10:22:20,974 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.060s
