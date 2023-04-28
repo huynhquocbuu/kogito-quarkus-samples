@@ -63,19 +63,16 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-hibernate-validator</artifactId>
     </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-hibernate-orm-panache</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-jdbc-postgresql</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-jdbc-oracle</artifactId>
-    </dependency>
 
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-hibernate-reactive-panache</artifactId>
+    </dependency>
+    <!-- Hibernate Reactive uses the reactive-pg-client with PostgreSQL under the hood -->
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-reactive-pg-client</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>io.quarkus</groupId>
