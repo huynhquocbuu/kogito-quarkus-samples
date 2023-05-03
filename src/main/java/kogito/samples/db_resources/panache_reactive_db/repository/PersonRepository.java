@@ -1,4 +1,4 @@
-package kogito.samples.databases.panache_reactive_db.repository;
+package kogito.samples.db_resources.panache_reactive_db.repository;
 
 import java.util.List;
 
@@ -6,12 +6,11 @@ import javax.enterprise.context.ApplicationScoped;
 
 import io.quarkus.hibernate.reactive.panache.PanacheRepository;
 import io.smallrye.mutiny.Uni;
-import kogito.samples.databases.panache_reactive_db.entity.Person;
-import kogito.samples.databases.panache_reactive_db.entity.Status;
+import kogito.samples.db_resources.panache_reactive_db.entity.Person;
+import kogito.samples.db_resources.panache_reactive_db.entity.Status;
 
 @ApplicationScoped
 public class PersonRepository implements PanacheRepository<Person>{
-    
     public Uni<Person> findByName(String name){
         return find("name", name).firstResult();
     }
