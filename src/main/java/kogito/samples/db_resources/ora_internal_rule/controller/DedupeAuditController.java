@@ -18,7 +18,6 @@ public class DedupeAuditController {
 
     @GET
     public Multi<DedupeAudit> getAll() {
-        //moviRepository.initdb();
         return dedupeAuditRepository.findAll();
     }
 }
