@@ -1,44 +1,10 @@
-2023-05-05 18:22:42,388 tpfho-0472mn9 dmn-rule-dev.jar[13088] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.datasource.reactive" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2023-05-05 18:22:42,388 tpfho-0472mn9 dmn-rule-dev.jar[13088] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.datasource.jdbc" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2023-05-05 18:22:42,456 tpfho-0472mn9 dmn-rule-dev.jar[13088] ERROR [io.qua.run.boo.StartupActionImpl] (Quarkus Main Thread) Error running Quarkus: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.quarkus.runner.bootstrap.StartupActionImpl$1.run(StartupActionImpl.java:104)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.lang.ExceptionInInitializerError
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:70)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:44)
-	at io.quarkus.runtime.Quarkus.run(Quarkus.java:124)
-	at io.quarkus.runner.GeneratedMain.main(Unknown Source)
-	... 6 more
-Caused by: java.lang.RuntimeException: Failed to start quarkus
-	at io.quarkus.runner.ApplicationImpl.<clinit>(Unknown Source)
-	... 15 more
-Caused by: java.lang.ClassNotFoundException: ConstraintViolationException
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	at io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:516)
-	at io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:466)
-	at io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:516)
-	at io.quarkus.bootstrap.classloading.QuarkusClassLoader.loadClass(QuarkusClassLoader.java:466)
-	at java.base/java.lang.Class.forName0(Native Method)
-	at java.base/java.lang.Class.forName(Class.java:467)
-	at kogito.samples.common.exception.ValidationHandler_Bean.<init>(Unknown Source)
-	at io.quarkus.arc.setup.Default_ComponentsProvider.addBeans2(Unknown Source)
-	at io.quarkus.arc.setup.Default_ComponentsProvider.getComponents(Unknown Source)
-	at io.quarkus.arc.impl.ArcContainerImpl.<init>(ArcContainerImpl.java:117)
-	at io.quarkus.arc.Arc.initialize(Arc.java:31)
-	at io.quarkus.arc.runtime.ArcRecorder.initContainer(ArcRecorder.java:43)
-	at io.quarkus.deployment.steps.ArcProcessor$generateResources844392269.deploy_0(Unknown Source)
-	at io.quarkus.deployment.steps.ArcProcessor$generateResources844392269.deploy(Unknown Source)
-	... 16 more
-
-2023-05-05 18:22:42,457 tpfho-0472mn9 dmn-rule-dev.jar[13088] INFO  [io.qua.dep.dev.IsolatedDevModeMain] (main) Attempting to start live reload endpoint to recover from previous Quarkus startup failure
+2023-05-08 00:27:33,679 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 0.255s. Listening on: http://localhost:9180
+2023-05-08 00:27:33,681 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-08 00:27:33,681 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, logging-gelf, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-08 00:27:33,682 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Live reload total time: 0.584s 
+2023-05-08 00:27:47,738 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) ---req is {
+  "request-id": "id",
+  "request-data": "data"
+} -----
+2023-05-08 00:27:47,743 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) ---response is [{"response-id":"id--1","response-data":"data--1"},{"response-id":"id--2","response-data":"data--2"}] -----
+2023-05-08 00:31:58,505 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.003s

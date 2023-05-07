@@ -1,9 +1,11 @@
-2023-05-05 18:15:41,369 tpfho-0472mn9 dmn-rule-dev.jar[11772] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "kogito.data-index.url" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2023-05-05 18:15:41,369 tpfho-0472mn9 dmn-rule-dev.jar[11772] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.datasource.jdbc" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2023-05-05 18:15:41,369 tpfho-0472mn9 dmn-rule-dev.jar[11772] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "kogito.generate.rest.decisions" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2023-05-05 18:15:42,597 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
-2023-05-05 18:15:43,524 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 18.936s. Listening on: http://localhost:9180
-2023-05-05 18:15:43,526 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-05 18:15:43,529 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, kogito-decisions, kogito-predictions, kogito-processes, kogito-rules, logging-gelf, reactive-mysql-client, reactive-oracle-client, reactive-pg-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-05 18:15:53,279 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in SampleController.class.
-2023-05-05 18:15:53,364 tpfho-0472mn9 dmn-rule-dev.jar[11772] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.083s
+2023-05-08 00:16:56,504 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 10.609s. Listening on: http://localhost:9180
+2023-05-08 00:16:56,519 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-08 00:16:56,523 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, logging-gelf, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-08 00:17:00,987 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) ---req is {
+  "request-id": "id",
+  "request-data": "data"
+} -----
+2023-05-08 00:17:01,179 p14s-fedora38 dmn-rule-dev.jar[28382] ERROR [kog.sam.com.exc.ExceptionHandler] (executor-thread-0) Cannot invoke "kogito.samples.sample_rest.SampleRequestModel.getRequestId()" because "request" is null
+2023-05-08 00:17:01,266 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) ---response is {"status":"Error","error-code":"Internal Server","error-message":"Cannot invoke \"kogito.samples.sample_rest.SampleRequestModel.getRequestId()\" because \"request\" is null"} -----
+2023-05-08 00:17:53,761 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Restarting quarkus due to changes in LoggingFilter.class.
+2023-05-08 00:17:53,804 p14s-fedora38 dmn-rule-dev.jar[28382] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.036s

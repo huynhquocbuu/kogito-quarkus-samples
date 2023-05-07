@@ -1,7 +1,0 @@
-2023-04-27 10:13:10,161 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 8.514s. Listening on: http://localhost:9081
-2023-04-27 10:13:10,163 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-04-27 10:13:10,164 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-validator, kogito-decisions, kogito-predictions, kogito-processes, kogito-rules, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-04-27 10:13:10,165 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Live reload total time: 8.649s 
-2023-04-27 10:14:56,895 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) File change detected: F:\WorkingPlace\TpbFico\Research\kogito-quarkus-samples\src\main\resources\application.properties
-2023-04-27 10:14:56,900 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Restarting quarkus due to changes in application.properties.
-2023-04-27 10:14:56,956 tpfho-0472mn9 dmn-rule-dev.jar[19656] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.055s

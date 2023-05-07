@@ -18,7 +18,6 @@ import org.jboss.resteasy.reactive.RestResponse.ResponseBuilder;
 public class SampleController {
     @POST
     public RestResponse<List<SampleResponseModel>> post(SampleRequestModel request) {
-        //moviRepository.initdb();
         List<SampleResponseModel> data = new ArrayList<>();
         data.add(new SampleResponseModel(request.getRequestId() + "--1", request.getRequestData() + "--1"));
         data.add(new SampleResponseModel(request.getRequestId() + "--2", request.getRequestData() + "--2"));
