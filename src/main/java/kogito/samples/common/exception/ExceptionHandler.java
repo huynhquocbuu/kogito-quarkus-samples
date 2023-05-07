@@ -1,22 +1,19 @@
 package kogito.samples.common.exception;
 
-import javax.inject.Inject;
-import javax.ws.rs.NotFoundException;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
-
+import jakarta.inject.Inject;
+import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.ext.ExceptionMapper;
 import lombok.extern.slf4j.Slf4j;
-
+import jakarta.ws.rs.ext.Provider;
 
 @Provider
 @Slf4j
 public class ExceptionHandler implements ExceptionMapper<Exception> {
 
     @Inject
-    javax.inject.Provider<ContainerRequestContext> containerRequestContextProvider;
+    jakarta.inject.Provider<ContainerRequestContext> containerRequestContextProvider;
     
     @Override
     public Response toResponse(Exception exception) {
@@ -35,7 +32,7 @@ public class ExceptionHandler implements ExceptionMapper<Exception> {
             );
             
             return Response
-                    .status(Status.BAD_REQUEST)
+                    .status(Response.Status.BAD_REQUEST)
                     .entity(body)
                     .build();
                 
@@ -47,7 +44,7 @@ public class ExceptionHandler implements ExceptionMapper<Exception> {
                 exception.getMessage()
             );
             return Response
-                    .status(Status.BAD_REQUEST)
+                    .status(Response.Status.BAD_REQUEST)
                     .entity(body)
                     .build();
     }

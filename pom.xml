@@ -6,7 +6,7 @@
   <artifactId>dmn-rule</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
-    <compiler-plugin.version>3.10.1</compiler-plugin.version>
+    <compiler-plugin.version>3.11.0</compiler-plugin.version>
     <lombok.version>1.18.26</lombok.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <maven.compiler.release>17</maven.compiler.release>
@@ -14,17 +14,17 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-    <quarkus.platform.version>2.16.6.Final</quarkus.platform.version>
+    <quarkus.platform.version>3.0.2.Final</quarkus.platform.version>
     <skipITs>true</skipITs>
-    <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+    <surefire-plugin.version>3.0.0</surefire-plugin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.mvel</groupId>
-        <artifactId>mvel2</artifactId>
-        <version>2.4.15.Final</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>org.mvel</groupId>-->
+<!--        <artifactId>mvel2</artifactId>-->
+<!--        <version>2.4.15.Final</version>-->
+<!--      </dependency>-->
       <dependency>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>${quarkus.platform.artifact-id}</artifactId>
@@ -32,13 +32,13 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <dependency>
-        <groupId>${quarkus.platform.group-id}</groupId>
-        <artifactId>quarkus-kogito-bom</artifactId>
-        <version>${quarkus.platform.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>${quarkus.platform.group-id}</groupId>-->
+<!--        <artifactId>quarkus-kogito-bom</artifactId>-->
+<!--        <version>${quarkus.platform.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
   <dependencies>
@@ -56,18 +56,15 @@
       <artifactId>quarkus-resteasy-reactive</artifactId>
     </dependency>
     
-    <!-- <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-agroal</artifactId>
-    </dependency> -->
-    <dependency>
-      <groupId>org.jboss.slf4j</groupId>
-      <artifactId>slf4j-jboss-logmanager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-logging-gelf</artifactId>
-    </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>org.jboss.slf4j</groupId>-->
+<!--      <artifactId>slf4j-jboss-logmanager</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>io.quarkus</groupId>-->
+<!--      <artifactId>quarkus-logging-gelf</artifactId>-->
+<!--    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
     <dependency>
@@ -86,6 +83,8 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
+
+
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-smallrye-openapi</artifactId>
