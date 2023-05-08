@@ -20,7 +20,17 @@ public class LoggingFilter implements ContainerRequestFilter, ContainerResponseF
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        log.info("\n request = {} \n response = status: {}, body: {}", requestBody, responseContext.getStatus(), mapper.writeValueAsString(responseContext.getEntity()));
+        if(responseContext.getStatus() == 200){
+            log.info("\n request = {} \n response = status: {}, body: {}",
+                    requestBody,
+                    responseContext.getStatus(),
+                    mapper.writeValueAsString(responseContext.getEntity()));
+        }else{
+            log.error("\n request = {} \n response = status: {}, body: {}",
+                    requestBody,
+                    responseContext.getStatus(),
+                    mapper.writeValueAsString(responseContext.getEntity()));
+        }
     }
 
     @Override
