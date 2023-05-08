@@ -1,9 +1,11 @@
-2023-05-08 01:21:40,953 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.0.2.Final) started in 2.071s. Listening on: http://localhost:9180
-2023-05-08 01:21:40,957 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-08 01:21:40,958 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-08 01:22:02,164 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-1) request: {
+2023-05-08 07:08:09,556 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.0.2.Final) started in 0.329s. Listening on: http://localhost:9180
+2023-05-08 07:08:09,557 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-08 07:08:09,558 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-08 07:08:09,559 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Live reload total time: 0.629s 
+2023-05-08 07:08:12,482 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-1) 
+ request = {
   "request-id": "id",
   "request-data": "data"
-}
-2023-05-08 01:22:02,247 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-1) response = status: 200, body: [{"response-id":"id--1","response-data":"data--1"},{"response-id":"id--2","response-data":"data--2"}]
-2023-05-08 01:22:20,482 p14s-fedora38 dmn-rule-dev.jar[38822] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.102s
+} 
+ response = status: 200, body: [{"response-id":"id--1","response-data":"data--1"},{"response-id":"id--2","response-data":"data--2"}]
+2023-05-08 07:08:40,316 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.005s

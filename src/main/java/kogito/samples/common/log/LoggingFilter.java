@@ -16,18 +16,16 @@ import org.apache.commons.io.IOUtils;
 @Provider
 @Slf4j
 public class LoggingFilter implements ContainerRequestFilter, ContainerResponseFilter {
+    private String requestBody;
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        log.info("response = status: {}, body: {}", responseContext.getStatus(), mapper.writeValueAsString(responseContext.getEntity()));
+        log.info("\n request = {} \n response = status: {}, body: {}", requestBody, responseContext.getStatus(), mapper.writeValueAsString(responseContext.getEntity()));
     }
 
     @Override
-    public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-        String json = IOUtils.toString(containerRequestContext.getEntityStream(), Charsets.UTF_8);
-        log.info("request: {}", json);
-
-        InputStream inputStream = IOUtils.toInputStream(json);
-        containerRequestContext.setEntityStream(inputStream);
+    public void filter(ContainerRequestContext requestContext) throws IOException {
+        requestBody = IOUtils.toString(requestContext.getEntityStream(), Charsets.UTF_8);
+        requestContext.setEntityStream(IOUtils.toInputStream(requestBody));
     }
 }

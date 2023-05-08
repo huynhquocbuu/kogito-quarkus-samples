@@ -1,9 +1,13 @@
-2023-05-08 00:32:17,557 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 2.916s. Listening on: http://localhost:9180
-2023-05-08 00:32:17,562 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-08 00:32:17,563 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, logging-gelf, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-08 00:32:32,364 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) request: {
+2023-05-08 07:06:11,964 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.0.2.Final) started in 0.281s. Listening on: http://localhost:9180
+2023-05-08 07:06:11,965 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-08 07:06:11,966 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-08 07:06:11,967 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Live reload total time: 0.589s 
+2023-05-08 07:06:14,333 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-1) request = {
   "request-id": "id",
   "request-data": "data"
-}
-2023-05-08 00:32:32,454 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [kog.sam.com.log.LoggingFilter] (executor-thread-0) response: [{"response-id":"id--1","response-data":"data--1"},{"response-id":"id--2","response-data":"data--2"}]
-2023-05-08 00:34:03,175 p14s-fedora38 dmn-rule-dev.jar[29207] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.014s
+} 
+ response = status: 200, body: [{"response-id":"id--1","response-data":"data--1"},{"response-id":"id--2","response-data":"data--2"}]
+2023-05-08 07:06:47,825 p14s-fedora38 dmn-rule-dev.jar[8144] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Aesh InputStream Reader) /home/kitaro/dev-area/kogito-quarkus-samples/src/main/java/kogito/samples/common/log/LoggingFilter.java uses or overrides a deprecated API., line -1 in /home/kitaro/dev-area/kogito-quarkus-samples/src/main/java/kogito/samples/common/log/LoggingFilter.java
+2023-05-08 07:06:47,826 p14s-fedora38 dmn-rule-dev.jar[8144] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Aesh InputStream Reader) Recompile with -Xlint:deprecation for details., line -1 in /home/kitaro/dev-area/kogito-quarkus-samples/src/main/java/kogito/samples/common/log/LoggingFilter.java
+2023-05-08 07:06:47,829 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (Aesh InputStream Reader) Restarting quarkus due to changes in LoggingFilter.class.
+2023-05-08 07:06:47,837 p14s-fedora38 dmn-rule-dev.jar[8144] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.007s
