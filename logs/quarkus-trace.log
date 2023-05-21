@@ -1,7 +1,8 @@
-2023-05-04 13:54:32,224 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
-2023-05-04 13:54:32,554 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 9.136s. Listening on: http://localhost:9180
-2023-05-04 13:54:32,555 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-04 13:54:32,556 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, kogito-decisions, kogito-predictions, kogito-processes, kogito-rules, reactive-mysql-client, reactive-oracle-client, reactive-pg-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-04 13:54:32,561 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 10.760s 
-2023-05-04 13:55:28,221 tpfho-0472mn9 dmn-rule-dev.jar[20124] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
-2023-05-04 13:55:28,221 tpfho-0472mn9 dmn-rule-dev.jar[20124] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.062s
+2023-05-21 21:05:13,238 buuhq-fico dmn-rule-dev.jar[18392] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
+2023-05-21 21:05:13,647 buuhq-fico dmn-rule-dev.jar[18392] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 2.900s. Listening on: http://localhost:9180
+2023-05-21 21:05:13,649 buuhq-fico dmn-rule-dev.jar[18392] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-21 21:05:13,650 buuhq-fico dmn-rule-dev.jar[18392] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, reactive-mysql-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-21 21:06:18,603 buuhq-fico dmn-rule-dev.jar[18392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-2) -------Rest Reactive Movie add test------
+2023-05-21 21:06:40,571 buuhq-fico dmn-rule-dev.jar[18392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-2) -------Rest Reactive Movie getActors------
+2023-05-21 21:12:42,983 buuhq-fico dmn-rule-dev.jar[18392] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Quarkus Main Thread) Failed to write out.
+2023-05-21 21:12:42,982 buuhq-fico dmn-rule-dev.jar[18392] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.024s
