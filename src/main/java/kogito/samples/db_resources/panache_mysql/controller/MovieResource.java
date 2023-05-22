@@ -1,5 +1,6 @@
 package kogito.samples.db_resources.panache_mysql.controller;
 
+import io.quarkus.hibernate.reactive.panache.Panache;
 import io.smallrye.mutiny.Uni;
 import kogito.samples.db_resources.panache_mysql.dto.MovieDTO;
 import kogito.samples.db_resources.panache_mysql.entity.Movie;
@@ -8,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.time.Duration;
 import java.time.LocalDate;
 
 @Path("/movie")
@@ -34,8 +36,11 @@ public class MovieResource {
                 "Director ABC",
                 LocalDate.of(2020, 1, 8));
 
-        return Movie.addMovie(movieAdd)
-                .onItem().transform(MovieDTO::from)
+        Movie.addMovie(movieAdd)
+                .onItem().transform(movie -> movie.getId());
+
+        return Uni.createFrom()
+                .item(new MovieDTO(1L, "title-fake", "director fake", LocalDate.of(1900, 1, 1)))
                 .onItem().transform(entity -> Response.ok(entity))
                 .onItem().transform(Response.ResponseBuilder::build);
     }

@@ -1,10 +1,13 @@
-2023-05-22 16:43:37,878 buuhq-fico dmn-rule-dev.jar[9792] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
-2023-05-22 16:43:38,135 buuhq-fico dmn-rule-dev.jar[9792] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 2.977s. Listening on: http://localhost:9180
-2023-05-22 16:43:38,138 buuhq-fico dmn-rule-dev.jar[9792] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-22 16:43:38,138 buuhq-fico dmn-rule-dev.jar[9792] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, reactive-oracle-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-22 16:43:54,541 buuhq-fico dmn-rule-dev.jar[9792] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-0) -------Rest Reactive Movie getActors------
-2023-05-22 16:43:58,609 buuhq-fico dmn-rule-dev.jar[9792] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-0) -------Rest Reactive Movie add test------
-2023-05-22 16:44:02,692 buuhq-fico dmn-rule-dev.jar[9792] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-0) -------Rest Reactive Movie getActors------
-2023-05-22 16:44:15,732 buuhq-fico dmn-rule-dev.jar[9792] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Console Shutdown Hook) Failed to write out.
-2023-05-22 16:44:15,749 buuhq-fico dmn-rule-dev.jar[9792] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
-2023-05-22 16:44:15,749 buuhq-fico dmn-rule-dev.jar[9792] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.017s
+2023-05-22 19:23:02,220 buuhq-fico dmn-rule-dev.jar[7392] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
+2023-05-22 19:23:02,484 buuhq-fico dmn-rule-dev.jar[7392] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 3.107s. Listening on: http://localhost:9180
+2023-05-22 19:23:02,487 buuhq-fico dmn-rule-dev.jar[7392] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-22 19:23:02,487 buuhq-fico dmn-rule-dev.jar[7392] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, reactive-oracle-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-22 19:23:41,637 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie getActors------
+2023-05-22 19:23:50,472 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie add test------
+2023-05-22 19:24:09,727 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie getActors------
+2023-05-22 19:24:15,302 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie getActors------
+2023-05-22 19:24:24,530 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie add test------
+2023-05-22 19:24:25,345 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie add test------
+2023-05-22 19:24:30,707 buuhq-fico dmn-rule-dev.jar[7392] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-1) -------Rest Reactive Movie getActors------
+2023-05-22 19:25:46,428 buuhq-fico dmn-rule-dev.jar[7392] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
+2023-05-22 19:25:46,428 buuhq-fico dmn-rule-dev.jar[7392] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.019s
