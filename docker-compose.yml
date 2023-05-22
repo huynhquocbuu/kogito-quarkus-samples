@@ -2,7 +2,7 @@ version: '3.9'
 services:
   quarkus-kogito-tdd-micro:
     build:
-      context: .
+      context: ./docker-build
       dockerfile: Dockerfile.native-micro
     image: quarkus-kogito-tdd:micro
     container_name: quarkus-kogito-tdd-micro
