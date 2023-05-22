@@ -1,42 +1,7 @@
-2023-05-22 16:17:17,070 buuhq-fico dmn-rule-dev.jar[26048] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
-2023-05-22 16:17:19,129 buuhq-fico dmn-rule-dev.jar[26048] ERROR [org.hib.rea.errors] (vert.x-eventloop-thread-0) HR000057: Failed to execute statement [select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position]: could not execute query : java.util.concurrent.CompletionException: io.vertx.oracleclient.OracleException: Error : 1427, Position : 407, Sql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, OriginalSql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, Error Msg = ORA-01427: single-row subquery returns more than one row
-
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
-	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:936)
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
-	at io.vertx.core.Future.lambda$toCompletionStage$3(Future.java:386)
-	at io.vertx.core.impl.future.FutureImpl$3.onFailure(FutureImpl.java:153)
-	at io.vertx.core.impl.future.FutureBase.emitFailure(FutureBase.java:75)
-	at io.vertx.core.impl.future.FutureImpl.tryFail(FutureImpl.java:230)
-	at io.vertx.core.impl.future.PromiseImpl.tryFail(PromiseImpl.java:23)
-	at io.vertx.sqlclient.impl.QueryResultBuilder.tryFail(QueryResultBuilder.java:116)
-	at io.vertx.core.Promise.fail(Promise.java:89)
-	at io.vertx.core.Promise.handle(Promise.java:53)
-	at io.vertx.core.Promise.handle(Promise.java:29)
-	at io.vertx.core.impl.future.FutureImpl$3.onFailure(FutureImpl.java:153)
-	at io.vertx.core.impl.future.FutureBase.emitFailure(FutureBase.java:75)
-	at io.vertx.core.impl.future.FutureImpl.tryFail(FutureImpl.java:230)
-	at io.vertx.core.impl.future.Composition$1.onFailure(Composition.java:66)
-	at io.vertx.core.impl.future.FutureImpl$ListenerArray.onFailure(FutureImpl.java:268)
-	at io.vertx.core.impl.future.FutureBase.emitFailure(FutureBase.java:75)
-	at io.vertx.core.impl.future.FutureImpl.tryFail(FutureImpl.java:230)
-	at io.vertx.core.impl.future.Eventually$2.onSuccess(Eventually.java:65)
-	at io.vertx.core.impl.future.FutureBase.lambda$emitSuccess$0(FutureBase.java:54)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: io.vertx.oracleclient.OracleException: Error : 1427, Position : 407, Sql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, OriginalSql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, Error Msg = ORA-01427: single-row subquery returns more than one row
-
-
-2023-05-22 16:17:19,160 buuhq-fico dmn-rule-dev.jar[26048] ERROR [io.qua.run.Application] (Quarkus Main Thread) Failed to start application (with profile [dev]): io.vertx.oracleclient.OracleException: Error : 1427, Position : 407, Sql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, OriginalSql = select (select constraint_name from user_constraints where r_owner = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY') as FK_NAME, null as PKTABLE_CAT, uc.owner as PKTABLE_SCHEM, ucc.table_name as PKTABLE_NAME, ucc.column_name as PKCOLUMN_NAME, ucc.column_name as FKCOLUMN_NAME from user_constraints uc join user_cons_columns ucc on uc.constraint_name = ucc.constraint_name  where uc.constraint_name = (SELECT R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE OWNER = 'TPF_RULE_OWNER' and table_name = 'ACTORMOVIEENTITY' and CONSTRAINT_TYPE = 'R') order by uc.owner, ucc.table_name, ucc.position, Error Msg = ORA-01427: single-row subquery returns more than one row
-
-
-2023-05-22 16:17:19,161 buuhq-fico dmn-rule-dev.jar[26048] INFO  [io.qua.dep.dev.IsolatedDevModeMain] (main) Attempting to start live reload endpoint to recover from previous Quarkus startup failure
+2023-05-22 16:40:48,484 buuhq-fico dmn-rule-dev.jar[20772] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
+2023-05-22 16:40:48,749 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 3.012s. Listening on: http://localhost:9180
+2023-05-22 16:40:48,751 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-22 16:40:48,751 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, reactive-oracle-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-22 16:41:06,130 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) File change detected: E:\WorkingPlace\TpbFico\Research\quarkus-business-rules\kogito-quarkus-samples\src\main\resources\application.properties
+2023-05-22 16:41:06,133 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in application.properties.
+2023-05-22 16:41:06,150 buuhq-fico dmn-rule-dev.jar[20772] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule stopped in 0.016s
