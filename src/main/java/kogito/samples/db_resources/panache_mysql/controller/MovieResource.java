@@ -2,9 +2,7 @@ package kogito.samples.db_resources.panache_mysql.controller;
 
 import io.smallrye.mutiny.Uni;
 import kogito.samples.db_resources.panache_mysql.dto.MovieDTO;
-import kogito.samples.db_resources.panache_mysql.entity.Actor;
 import kogito.samples.db_resources.panache_mysql.entity.Movie;
-import kogito.samples.db_resources.panache_mysql.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.ws.rs.*;
