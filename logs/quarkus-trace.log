@@ -1,7 +1,12 @@
-2023-05-22 09:59:22,656 buuhq-fico dmn-rule-dev.jar[5296] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
-2023-05-22 09:59:23,395 buuhq-fico dmn-rule-dev.jar[5296] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 3.887s. Listening on: http://localhost:9180
-2023-05-22 09:59:23,398 buuhq-fico dmn-rule-dev.jar[5296] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2023-05-22 09:59:23,399 buuhq-fico dmn-rule-dev.jar[5296] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, reactive-mysql-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
-2023-05-22 10:00:38,626 buuhq-fico dmn-rule-dev.jar[5296] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-2) -------Rest Reactive Movie getActors------
-2023-05-22 10:01:48,620 buuhq-fico dmn-rule-dev.jar[5296] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
-2023-05-22 10:01:48,619 buuhq-fico dmn-rule-dev.jar[5296] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.020s
+2023-05-22 15:37:41,734 buuhq-fico dmn-rule-dev.jar[27244] INFO  [org.hib.rea.pro.imp.ReactiveIntegrator] (JPA Startup Thread) HR000001: Hibernate Reactive
+2023-05-22 15:37:43,925 buuhq-fico dmn-rule-dev.jar[27244] WARN  [org.hib.rea.pro.ser.ReactiveGenerationTarget] (vert.x-eventloop-thread-0) HR000021: DDL command failed [io.vertx.oracleclient.OracleException: Error : 2443, Position : 45, Sql = alter table ActorMovieEntity drop constraint UKqkr7wg1hk195bc04keo9tu0yt, OriginalSql = alter table ActorMovieEntity drop constraint UKqkr7wg1hk195bc04keo9tu0yt, Error Msg = ORA-02443: Cannot drop constraint  - nonexistent constraint
+]
+2023-05-22 15:37:44,243 buuhq-fico dmn-rule-dev.jar[27244] INFO  [io.quarkus] (Quarkus Main Thread) dmn-rule 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 5.344s. Listening on: http://localhost:9180
+2023-05-22 15:37:44,248 buuhq-fico dmn-rule-dev.jar[27244] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-22 15:37:44,249 buuhq-fico dmn-rule-dev.jar[27244] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, hibernate-orm, hibernate-reactive, hibernate-reactive-panache, hibernate-validator, jdbc-oracle, reactive-oracle-client, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+2023-05-22 15:39:45,586 buuhq-fico dmn-rule-dev.jar[27244] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-4) -------Rest Reactive Movie getActors------
+2023-05-22 15:39:56,333 buuhq-fico dmn-rule-dev.jar[27244] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-4) -------Rest Reactive Movie add test------
+2023-05-22 15:40:02,102 buuhq-fico dmn-rule-dev.jar[27244] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-4) -------Rest Reactive Movie add test------
+2023-05-22 15:40:08,865 buuhq-fico dmn-rule-dev.jar[27244] INFO  [kog.sam.db_.pan.con.MovieResource] (vert.x-eventloop-thread-4) -------Rest Reactive Movie getActors------
+2023-05-22 16:04:50,666 buuhq-fico dmn-rule-dev.jar[27244] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
+2023-05-22 16:04:50,665 buuhq-fico dmn-rule-dev.jar[27244] INFO  [io.quarkus] (Shutdown thread) dmn-rule stopped in 0.025s

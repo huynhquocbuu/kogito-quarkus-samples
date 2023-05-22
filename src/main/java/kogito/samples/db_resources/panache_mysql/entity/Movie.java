@@ -63,6 +63,7 @@ public class Movie extends PanacheEntityBase {
     }
 
     public static Uni<Movie> addMovie(Movie movie) {
+
         return Panache
                 .withTransaction(movie::persist);
                 //.replaceWith(movie)
