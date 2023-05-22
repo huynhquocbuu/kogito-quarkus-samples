@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  quarkus-kogito-tdd-micro:
+    build:
+      context: .
+      dockerfile: Dockerfile.native-micro
+    image: quarkus-kogito-tdd:micro
+    container_name: quarkus-kogito-tdd-micro
+    #restart: unless-stopped
+    ports:
+      - 9180:9180
+    volumes:
+      - ./external-config:/work/config
+    networks:
+      - net-db
